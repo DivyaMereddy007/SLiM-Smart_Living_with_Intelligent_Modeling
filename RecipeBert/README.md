@@ -23,26 +23,26 @@ Important Key Points in Cooking:
   <img src="image-5.png" alt="Alt text" width="700" >
 </p>
 
-#### A simle question for you:
+#### A simple question for you:
     Why do you think NLP is the way to  go for this problem. Why not traditional models like user to user
     recommendation models ? or feature based recommendation models ? 
 
 - The project is relatively new ( less than 2 years), this solution is perfect to handle limited historical user data case.
 - Simple solutions that require minimal feature engineering and allow for the straightforward addition of new items to the system (like simple addotion of openly available new recipe text).
 
-#### Lets try an other one:
+#### Let's try another one:
     OK all great. NLP is the way. But which transformer architecture to choose? Encoder / Decoder/
     Encoder-decoder? 
 
-- BERT typically perform better on specific tasks rather than general ones. In the context predicting recipes(sentence) similarity similarity a specialized approach using a model like BERT could be quite effective.
+- BERT typically perform better on specific tasks rather than general ones. In the context predicting recipes(sentence) similarity a specialized approach using a model like BERT could be quite effective.
 
 
 ### Why Bert?
 1] Ingredients similarity - Word similarity: 
-    When ingredients are similar they both high likily to have similar taste. For Example: chicken lovers, and dessert (sugar) lovers.
+    When ingredients are similar they are both high likely to have similar taste. For Example: chicken lovers, and dessert (sugar) lovers.
 
 2] Procedure similarity - Semantic similarity: 
-    If the cooking process is similar, they both likily to have similar texture and taste. Example: Baking foods, No cooking food(Salads), Food/ Half cooked eggs.
+    If the cooking process is similar, they are both likely to have similar texture and taste. Example: Baking foods, No cooking food(Salads), Food/ Half cooked eggs.
 
 ## Sentence Bert Architecture Overview/ Sudo Code:
 
@@ -76,14 +76,14 @@ Important Key Points in Cooking:
     11 for t ∈ [ℓ] : X[:,t] ← layer_norm(X[:,t]|γ, β)
     12 return P = softmax(W_u X)
 
-#### Lets try one more:
+#### Let's try one more:
     Why cannot we use Bert directly for sentence similarity. What is the need of new architecture so 
     a different transformer?
-    hint: Think in terms of computation. What is the time complexicity for a dataset of size n  
+    hint: Think in terms of computation. What is the time complexity for a dataset of size n  
 
 - Finding the two most similar sentences in a dataset of n: This would require us to feed each unique pair through BERT to find its similarity score and then compare it to all other scores. For n sentences would that result in n(n — 1)/2. This turns out to be a real problem if you are trying to integrate this in a real-time environment. A small dataset of only 10,000 sentences would require 49,995,000 passes through BERT, which on a modern GPU would take 60+ hours! This obviously renders BERT useless in most of these scenarios
 
-#### Sentence bert: 
+#### Sentence Bert: 
 
 ###### Siamese network:
 It is a class of neural network architectures that contain two or more identical subnetworks. "Identical" here means that they have the same configuration with the same parameters and weights. Parameter updating is mirrored across both subnetworks during the training process.
@@ -135,7 +135,7 @@ Simple steps:
 - Calculate the distance between sentence embeddings using Euclidean or Cosine similarity.
 - We now have a measure of semantic similarity between sentences. 
 
-## Code Demonstraction
+## Code Demonstration
 https://colab.research.google.com/drive/1P1WGhn-EhVT1YC5W74A1fM-jqV0s5J9l
 
 <p align="center">
@@ -143,17 +143,16 @@ https://colab.research.google.com/drive/1P1WGhn-EhVT1YC5W74A1fM-jqV0s5J9l
 </p>
 
 ## Critical Analysis:
-Is the item to item recommendtaion is just enough for a smart home application? Recommendations models always work great if we have user to user, item-to-item both, Complementary models(in few cases).
-- Writer was not able to integret other method becuase of their users data constrains. But this method can perfectly be implimented in item to item similarity use cases. Example: Doordash showing similar items when user searched for an item. 
-- Writer wants to integrat other recommendtaions method in their future work. 
+Is the item-to-item recommendation just enough for a smart home application? Recommendations models always work great if we have user-to-user, item-to-item both, and Complementary models(in a few cases).- Writer was not able to integrate other methods because of their users data constraints. But this method can perfectly be implemented in item to item similarity use cases. Example: Doordash showing similar items when the user searched for an item. 
+- Writer wants to integrate other recommendation methods in their future work. 
 
-The model is not validated based on real environment with real users recommendtaion data and it's only validated based on survey's data. Final validation is still pending. 
+The model is not validated based on real environment with real users recommendation data and it's only validated based on survey's data. Final validation is still pending. 
 - Planning to do as a part of next phase of work.
 
-Comparison with chatGPT chain of thoughts. Can this very generalized model provide better score than bert ?  Other try any other encoder decoder model. 
-- Involving chatGPT increases the project maintance budget. This simple task should not have high maintaince cost. There is also a scopre for data privacy issues. 
+Comparison with chatGPT chain of thoughts. Can this very generalized model provide better score than Bert?  Other try any other encoder-decoder model. 
+- Involving chatGPT increases the project maintenance budget. This simple task should not have a high maintenance cost. There is also a scope for data privacy issues. 
 Encoder & decoder performance validation?
--   We tried it, but with in our resource limitations, we were not able to achieve similar results. Planning to do further evaluation as a part of future work.
+-   We tried it, but within our resource limitations, we were not able to achieve similar results. Planning to do further evaluation as a part of future work.
 
 Can we boost performance by fine-tuning? 
 -   Can be. We are planning for our next phase as we are interested in improving performance. But it can be computationally very costly step to take. 
