@@ -3,7 +3,7 @@
 ## Introduction:
 
 <p align="center">
-  <img src="image-2.png" alt="Alt text" width="600">
+  <img src="image-2.png" alt="Alt text" width="600" height>
 </p>
 
 #### Abstract:
@@ -39,6 +39,7 @@ Important Key Points in Cooking:
 ### Why Bert?
 1] Ingredients similarity - Word similarity: 
     When ingredients are similar they both high likily to have similar taste. For Example: chicken lovers, and dessert (sugar) lovers.
+
 2] Procedure similarity - Semantic similarity: 
     If the cooking process is similar, they both likily to have similar texture and taste. Example: Baking foods, No cooking food(Salads), Food/ Half cooked eggs.
 
@@ -75,10 +76,11 @@ Important Key Points in Cooking:
     12 return P = softmax(W_u X)
 
 #### Lets try one more:
-    Why cannot we use Bert directly for sentence similarity. What is the need of new architecture so a different transformer?
+    Why cannot we use Bert directly for sentence similarity. What is the need of new architecture so 
+    a different transformer?
     hint: Think in terms of computation. What is the time complexicity for a dataset of size n  
 
-- Finding the two most similar sentences in a dataset of n. This would require us to feed each unique pair through BERT to finds its similarity score and then compare it to all other scores. For n sentences would that result in n(n — 1)/2. This turns out to be a real problem if you are trying to integrate this in a real-time environment. A small dataset of only 10,000 sentences would require 49,995,000 passes through BERT, which on a modern GPU would take 60+ hours! This obviously renders BERT useless in most of these scenarios
+- Finding the two most similar sentences in a dataset of n: This would require us to feed each unique pair through BERT to find its similarity score and then compare it to all other scores. For n sentences would that result in n(n — 1)/2. This turns out to be a real problem if you are trying to integrate this in a real-time environment. A small dataset of only 10,000 sentences would require 49,995,000 passes through BERT, which on a modern GPU would take 60+ hours! This obviously renders BERT useless in most of these scenarios
 
 #### Sentence bert: 
     # Input
@@ -112,15 +114,16 @@ SentenceBERT twin architecture configured for classification.
 #### Item to Item Similarity Prediction using Bert:
 
 Simple steps:
-1] Tune your Bert model. Pass sentences, and convert them into embeddings.
-2] Calculate the distance between sentence embeddings using Euclidean or cosine similarity.
-3] We now have a measure of semantic similarity between sentences. 
+
+- Tune your Bert model. Pass sentences, and convert them into embeddings.
+- Calculate the distance between sentence embeddings using Euclidean or cosine similarity.
+- We now have a measure of semantic similarity between sentences. 
 
 ## Code Demonstraction
 https://colab.research.google.com/drive/1P1WGhn-EhVT1YC5W74A1fM-jqV0s5J9l
 
 <p align="center">
-  <img src="image-6.png" alt="Alt text" width="600">
+  <img src="image-6.png" alt="Alt text" width="500">
 </p>
 
 ## Critical Analysis:
@@ -128,8 +131,10 @@ https://colab.research.google.com/drive/1P1WGhn-EhVT1YC5W74A1fM-jqV0s5J9l
 Recommendations models always work great if we have user to user, item-to-item both, Complementary models(in few cases).
 - Writer was not able to integret other method becuase of their users data constrains. But this method can perfectly be implimented in item to item similarity use cases. Example: Doordash showing similar items when user searched for an item. 
 - Writer wants to integrat other recommendtaions method in their future work. 
+
 The model is not validated based on real environment with real users recommendtaion data and it's only validated based on survey's data. Final validation is still pending. 
 - Planning to do as a part of next phase of work.
+
 Comparison with chatGPT chain of thoughts. Can this very generalized model provide better score than bert ?  Other try any other encoder decoder model. 
 - Involving chatGPT increases the project maintance budget. This simple task should not have high maintaince cost. There is also a scopre for data privacy issues. 
 - Encoder & decoder performance validation. We tried it, but with in our resource limitations, we were not able to achieve similar results. Planning to do further evaluation as a part of future work.
