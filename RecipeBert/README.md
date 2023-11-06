@@ -88,17 +88,17 @@ Important Key Points in Cooking:
 ###### Siamese network:
 It is a class of neural network architectures that contain two or more identical subnetworks. "Identical" here means that they have the same configuration with the same parameters and weights. Parameter updating is mirrored across both subnetworks during the training process.
 
-###### Triplet Objective Function:
-Given an anchor sentence a, a positive sentence p, and a negative sentence n, triplet loss tunes the network such that the distance between a and p is smaller than the distance between a and n. Mathematically, we minimize the following loss function:
-
-    Loss Function: max(||s_a - s_p|| - ||s_a - s_n|| + ε, 0)
-
- 
 SentenceBERT twin architecture configured for classification.
 
 <p align="center">
   <img src="image-7.png" alt="Alt text" width="300">
 </p>
+
+
+###### Triplet Objective Function:
+Given an anchor sentence a, a positive sentence p, and a negative sentence n, triplet loss tunes the network such that the distance between a and p is smaller than the distance between a and n. Mathematically, we minimize the following loss function:
+
+    Loss Function: max(||s_a - s_p|| - ||s_a - s_n|| + ε, 0)
 
 ###### Sentence Bert Sudo Code:
 
