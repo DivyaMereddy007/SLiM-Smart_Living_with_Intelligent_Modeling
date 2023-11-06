@@ -127,8 +127,7 @@ https://colab.research.google.com/drive/1P1WGhn-EhVT1YC5W74A1fM-jqV0s5J9l
 </p>
 
 ## Critical Analysis:
-#### Is the item to item recommendtaion is just enough for a smart home application?
-Recommendations models always work great if we have user to user, item-to-item both, Complementary models(in few cases).
+Is the item to item recommendtaion is just enough for a smart home application? Recommendations models always work great if we have user to user, item-to-item both, Complementary models(in few cases).
 - Writer was not able to integret other method becuase of their users data constrains. But this method can perfectly be implimented in item to item similarity use cases. Example: Doordash showing similar items when user searched for an item. 
 - Writer wants to integrat other recommendtaions method in their future work. 
 
@@ -149,32 +148,56 @@ https://www.youtube.com/watch?v=9aUtnod9zqE&t=453s
 
 ## Resources Links: 
 [1]	Item-based Collaborative Filtering with BERT ,Yuyangzi Fu,Tian Wang, https://aclanthology.org/2020.ecnlp-1.8.pdf
+
 [2] https://www.pinecone.io/learn/series/nlp/sentence-embeddings/
+
 [3] https://medium.com/dair-ai/tl-dr-sentencebert-8dec326daf4e
+
 [4] https://www.coursera.org/learn/convolutional-neural-networks/lecture/bjhmj/siamese-network
 
 ## Citations:
 Paper: MEREDDY DIVYA. (2023). ENABLING NEXT-GENERATION SMART HOMES THROUGH AI-DRIVEN PERSONALIZED FOOD RECOMMENDATIONS. https://doi.org/10.5281/zenodo.8015512 
+
 [1]	Item-based Collaborative Filtering with BERT ,Yuyangzi Fu,Tian Wang, https://aclanthology.org/2020.ecnlp-1.8.pdf
+
 [2]	Nils Reimers, Iryna Gurevych, Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks, https://arxiv.org/pdf/1908.10084.pdf
+
 [3]	Nusrat Jahan Prottasha, Abdullah As Sami, Md Kowsher, Saydul Akbar Murad, Anupam Kumar Bairagi, Mehedi Masud, and Mohammed Baz, Transfer Learning for Sentiment Analysis Using BERT Based Supervised Fine-Tuning, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9185586/
+
 [4]	Vishnu Nandakumar, Recommendation system using BERT embeddings, https://medium.com/analytics-vidhya/recommendation-system-using-bert-embeddings-1d8de5fc3c56
+
 [5]	D. Viji, and S. Revathy, A hybrid approach of Weighted Fine-Tuned BERT extraction with deep Siamese Bi – LSTM model for semantic text similarity identification, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8735740/
+
 [6]	Xingyun Xie, Zifeng Ren, Yuming Gu and Chengwen Zhang, Text Recommendation Algorithm Fused with BERT Semantic Information, https://dl.acm.org/doi/abs/10.1145/3507548.3507582
+
 [7]	Itzik Malkiel , Dvir Ginzburg, Oren Barkan, Avi Caciularu, Jonathan Weill, Noam Koenigstein, Interpreting BERT-based Text Similarity via Activation and Saliency Maps, https://dl.acm.org/doi/abs/10.1145/3485447.3512045
+
 [8]	Allyson Ettinger, What BERT Is Not: Lessons from a New Suite of Psycholinguistic Diagnostics for Language Models. https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00298/43535/What-BERT-Is-Not-Lessons-from-a-New-Suite-of
+
 [9]	Semantic Similarity with BERT, https://keras.io/examples/nlp/semantic_similarity_with_bert/#inference-on-custom-sentences
+
 [10]	James Briggs, BERT For Measuring Text Similarity, https://towardsdatascience.com/bert-for-measuring-text-similarity-eec91c6bf9e1
+
 [11]	PAUL MOONEY , RecipeNLG (cooking recipes dataset, https://www.kaggle.com/code/paultimothymooney/explore-recipe-nlg-dataset
+
 [12]	Kashish Ahuja, Mukul Goel, Sunil Sikka, and Priyanka Makkar, What-To-Taste: A Food Recommendation System, https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3670234
+
 [13]	Yasmin Beij, A Literature Review on Food Recommendation Systems to Improve Online Consumer Decision-Making, https://edepot.wur.nl/526224
+
 [14]	Luís Rita, Building a Food Recommendation System, Towards data science, https://towardsdatascience.com/building-a-food-recommendation-system-90788f78691a
+
 [15]	Thi Ngoc Trang Tran, Müslüm Atas, Alexander Felfernig, and Martin Stettinger , Journal of Intelligent Information Systems volume 50, pages 501–526 (2018), An overview of recommender systems in the healthy food domain, https://link.springer.com/article/10.1007/s10844-017-0469-0
+
 [16]	Pratiksha Ashok.Naik, International Journal of Innovative Science and Research Technology, ISSN No:-2456-2165, Volume 5, Issue 8, August – 2020 
+
 [17]	Florian Pecune1*, Lucile Callebert1 and Stacy Marsella1, Designing Persuasive Food Conversational Recommender Systems With Nudging and Socially-Aware Conversational Strategies, https://www.frontiersin.org/articles/10.3389/frobt.2021.733835/full
+
 [18]	RECIPE COURTESY OF INA GARTEN, https://www.foodnetwork.com
+
 [19]	https://arxiv.org/pdf/1904.06690.pdf
+
 [20]	https://paperswithcode.com/dataset/recipenlg#:~:text=The%20benchmarks%20section%20lists%20all,Homepage%20Benchmarks%20Edit
+
 [21]	https://www.researchgate.net/publication/345308878_Cooking_recipes_generator_utilizing_a_deep_learning-based_language_model
 
 
