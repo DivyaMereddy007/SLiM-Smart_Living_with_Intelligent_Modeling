@@ -99,7 +99,7 @@ Important Key Points in Cooking:
 
 SentenceBERT twin architecture configured for classification.
 ![Alt text](image-7.png){height="50%" : width="50%"}
-<img src="image-7.png" alt="Alt text" height="900">
+<img src="image-7.png" alt="Alt text" height="400">
 
 
 #### Item to Item Similarity Prediction using Bert:
