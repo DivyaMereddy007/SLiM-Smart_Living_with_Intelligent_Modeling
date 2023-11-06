@@ -7,7 +7,8 @@
 </p>
 
 #### Abstract:
-The rapid proliferation of advanced AI technologies has propelled numerous industries forward, but the smart home sector has yet to realize its full potential in the next-generation landscape. A true smart home transcends mere automation, becoming an entity that comprehends and anticipates residents' needs, providing timely and personalized services. This research paper explores the paradigm of a fully intelligent home environment, where residents enjoy a hospitality-like experience while their smart home proactively serves their requirements. One such service can be offering customized food suggestions for daily meals, considering individual preferences, cultural influences, weather conditions, dietary restrictions, and an inclination to explore novel recipes. Our proposed system leverages a state-of-the-art NLP Bert model-based similarity prediction approach to rank recipes based on word and contextual similarities. Recipes that have common ingredients and preparation methods are categorized as similar, while those differing in ingredient types and cooking techniques are classified as not similar. By analyzing 'n' days of historical eating habits, the system generates a curated selection of the top 'k' recipes while avoiding repetition by excluding products consumed within the recent 'm' days (here m<<<<n).
+
+While artificial intelligence continues to revolutionize various industries, the smart home industry has not reached the next-generation level yet. For a home to be truly smart, it should fully predict the needs of its residents, responding with appropriate services promptly. Imagine living in a home that not only manages itself but also enhances the daily lives of its residents by offering everyday meals food recommendations based on their taste, culture, weather, diet, their interest in trying new recipes. This vision of living effortlessly, akin to the experience provided by a high-end motel, is what our research aims to achieve. Our proposed system is built upon a BERT-based natural language processing model that predicts recipe similarity. The system ranks the recipes based on the similarity of the words and semantic similarity. Recipes have similar ingredients and procedures are considered similar recipes. The model effectively curates a personalized list of top recipes, taking into account the household's eating patterns over an extended period. It ensures variety by filtering out suggestions that closely mirror recent meals, thereby preventing repetition and keeping the dining experience fresh and exciting. 
 
 <p align="center">
   <img src="image-3.png" alt="Alt text" width="600">
@@ -92,6 +93,13 @@ Given an anchor sentence a, a positive sentence p, and a negative sentence n, tr
 
     Loss Function: max(||s_a - s_p|| - ||s_a - s_n|| + ε, 0)
 
+ 
+SentenceBERT twin architecture configured for classification.
+
+<p align="center">
+  <img src="image-7.png" alt="Alt text" width="300">
+</p>
+
 ###### Sentence Bert Sudo Code:
 
         Load Pretrained_BERT_Model
@@ -117,20 +125,14 @@ Given an anchor sentence a, a positive sentence p, and a negative sentence n, tr
 
             If Validation_Performance_Improves: Save_Model_Checkpoint          
         
- 
-SentenceBERT twin architecture configured for classification.
-
-<p align="center">
-  <img src="image-7.png" alt="Alt text" width="300">
-</p>
 
 
 #### Item to Item Similarity Prediction using Bert:
 
 Simple steps:
 
-- Tune your Bert model. Pass sentences, and convert them into embeddings.
-- Calculate the distance between sentence embeddings using Euclidean or cosine similarity.
+- Pass sentences, and convert them into embeddings.
+- Calculate the distance between sentence embeddings using Euclidean or Cosine similarity.
 - We now have a measure of semantic similarity between sentences. 
 
 ## Code Demonstraction
@@ -150,7 +152,8 @@ The model is not validated based on real environment with real users recommendta
 
 Comparison with chatGPT chain of thoughts. Can this very generalized model provide better score than bert ?  Other try any other encoder decoder model. 
 - Involving chatGPT increases the project maintance budget. This simple task should not have high maintaince cost. There is also a scopre for data privacy issues. 
-- Encoder & decoder performance validation. We tried it, but with in our resource limitations, we were not able to achieve similar results. Planning to do further evaluation as a part of future work.
+Encoder & decoder performance validation?
+-   We tried it, but with in our resource limitations, we were not able to achieve similar results. Planning to do further evaluation as a part of future work.
 
 Can we boost performance by fine-tuning? 
 -   Can be. We are planning for our next phase as we are interested in improving performance. But it can be computationally very costly step to take. 
