@@ -34,7 +34,7 @@ Important Key Points in Cooking:
     OK all great. NLP is the way. But which transformer architecture to choose? Encoder / Decoder/
     Encoder-decoder? 
 
-- BERT typically perform better on specific tasks rather than general ones. In the context predicting recipes(sentence) similarity a specialized approach using a model like BERT could be quite effective.
+- Encoders typically perform better on specific tasks rather than general ones. In the context predicting recipes(sentence) similarity a specialized approach using a model like BERT could be quite effective.
 
 
 ### Why Bert?
@@ -157,7 +157,7 @@ Encoder & decoder performance validation?
 Can we boost performance by fine-tuning? 
 -   Can be. We are planning for our next phase as we are interested in improving performance. But it can be computationally very costly step to take. 
 
-Validate RobertSertence Transformer Architecture. 
+Validate RobertSentence Transformer Architecture. 
 - Yes, as it's one of the other model considered in SentenceTransformer paper, we are interested in validating it's performance. 
 
 ## Repo:
@@ -165,7 +165,9 @@ Validate RobertSertence Transformer Architecture.
 https://github.com/DivyaMereddy007/RecipeBert/tree/main/RecipeBert
 
 ## Video Recordings: 
+https://github.com/DivyaMereddy007/RecipeBert/raw/main/RecipeBert/video1137462603.mp4
 https://www.youtube.com/watch?v=9aUtnod9zqE&t=453s
+
 
 ## Resources Links: 
 [1]	Item-based Collaborative Filtering with BERT ,Yuyangzi Fu,Tian Wang, https://aclanthology.org/2020.ecnlp-1.8.pdf
@@ -176,6 +178,8 @@ https://www.youtube.com/watch?v=9aUtnod9zqE&t=453s
 
 [4] https://www.coursera.org/learn/convolutional-neural-networks/lecture/bjhmj/siamese-network
 
+[4]	Vishnu Nandakumar, Recommendation system using BERT embeddings, https://medium.com/analytics-vidhya/recommendation-system-using-bert-embeddings-1d8de5fc3c56
+
 ## Citations:
 Paper: MEREDDY DIVYA. (2023). ENABLING NEXT-GENERATION SMART HOMES THROUGH AI-DRIVEN PERSONALIZED FOOD RECOMMENDATIONS. https://doi.org/10.5281/zenodo.8015512 
 
@@ -184,8 +188,6 @@ Paper: MEREDDY DIVYA. (2023). ENABLING NEXT-GENERATION SMART HOMES THROUGH AI-DR
 [2]	Nils Reimers, Iryna Gurevych, Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks, https://arxiv.org/pdf/1908.10084.pdf
 
 [3]	Nusrat Jahan Prottasha, Abdullah As Sami, Md Kowsher, Saydul Akbar Murad, Anupam Kumar Bairagi, Mehedi Masud, and Mohammed Baz, Transfer Learning for Sentiment Analysis Using BERT Based Supervised Fine-Tuning, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9185586/
-
-[4]	Vishnu Nandakumar, Recommendation system using BERT embeddings, https://medium.com/analytics-vidhya/recommendation-system-using-bert-embeddings-1d8de5fc3c56
 
 [5]	D. Viji, and S. Revathy, A hybrid approach of Weighted Fine-Tuned BERT extraction with deep Siamese Bi – LSTM model for semantic text similarity identification, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8735740/
 
