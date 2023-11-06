@@ -2,19 +2,25 @@
  
 ## Introduction:
 
-<img src="image-2.png" alt="Alt text" height="400">
+<p align="center">
+  <img src="image-2.png" alt="Alt text" width="200">
+</p>
 
 #### Abstract:
 The rapid proliferation of advanced AI technologies has propelled numerous industries forward, but the smart home sector has yet to realize its full potential in the next-generation landscape. A true smart home transcends mere automation, becoming an entity that comprehends and anticipates residents' needs, providing timely and personalized services. This research paper explores the paradigm of a fully intelligent home environment, where residents enjoy a hospitality-like experience while their smart home proactively serves their requirements. One such service can be offering customized food suggestions for daily meals, considering individual preferences, cultural influences, weather conditions, dietary restrictions, and an inclination to explore novel recipes. Our proposed system leverages a state-of-the-art NLP Bert model-based similarity prediction approach to rank recipes based on word and contextual similarities. Recipes that have common ingredients and preparation methods are categorized as similar, while those differing in ingredient types and cooking techniques are classified as not similar. By analyzing 'n' days of historical eating habits, the system generates a curated selection of the top 'k' recipes while avoiding repetition by excluding products consumed within the recent 'm' days (here m<<<<n).
 
-<img src="image-3.png" alt="Alt text" height="200">
+<p align="center">
+  <img src="image-3.png" alt="Alt text" width="200">
+</p>
 
 ## Item to Item Similarity model
 Important Key Points in Cooking:
 - Ingredients : Items used to make the recipe like chicken, tamato, pasta, chocolate, sugar etc 
 - Cooking  process: Baking, deep fry, cooking in water, grinding 
 
-<img src="image-5.png" alt="Alt text" height="400">
+<p align="center">
+  <img src="image-5.png" alt="Alt text" width="200" height="150">
+</p>
 
 #### A simle question for you:
     Why do you think NLP is the way to  go for this problem. Why not traditional models like user to user
@@ -97,7 +103,10 @@ Important Key Points in Cooking:
     sim = cosine_similarity(embeddings[i], embeddings[j])
 
 SentenceBERT twin architecture configured for classification.
-<img src="image-7.png" alt="Alt text" height="400">
+
+<p align="center">
+  <img src="image-7.png" alt="Alt text" width="150">
+</p>
 
 
 #### Item to Item Similarity Prediction using Bert:
