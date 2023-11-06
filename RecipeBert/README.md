@@ -3,14 +3,14 @@
 ## Introduction:
 
 <p align="center">
-  <img src="image-2.png" alt="Alt text" width="400">
+  <img src="image-2.png" alt="Alt text" width="600">
 </p>
 
 #### Abstract:
 The rapid proliferation of advanced AI technologies has propelled numerous industries forward, but the smart home sector has yet to realize its full potential in the next-generation landscape. A true smart home transcends mere automation, becoming an entity that comprehends and anticipates residents' needs, providing timely and personalized services. This research paper explores the paradigm of a fully intelligent home environment, where residents enjoy a hospitality-like experience while their smart home proactively serves their requirements. One such service can be offering customized food suggestions for daily meals, considering individual preferences, cultural influences, weather conditions, dietary restrictions, and an inclination to explore novel recipes. Our proposed system leverages a state-of-the-art NLP Bert model-based similarity prediction approach to rank recipes based on word and contextual similarities. Recipes that have common ingredients and preparation methods are categorized as similar, while those differing in ingredient types and cooking techniques are classified as not similar. By analyzing 'n' days of historical eating habits, the system generates a curated selection of the top 'k' recipes while avoiding repetition by excluding products consumed within the recent 'm' days (here m<<<<n).
 
 <p align="center">
-  <img src="image-3.png" alt="Alt text" width="400">
+  <img src="image-3.png" alt="Alt text" width="600">
 </p>
 
 ## Item to Item Similarity model
@@ -19,7 +19,7 @@ Important Key Points in Cooking:
 - Cooking  process: Baking, deep fry, cooking in water, grinding 
 
 <p align="center">
-  <img src="image-5.png" alt="Alt text" width="400" >
+  <img src="image-5.png" alt="Alt text" width="700" >
 </p>
 
 #### A simle question for you:
@@ -120,7 +120,7 @@ Simple steps:
 https://colab.research.google.com/drive/1P1WGhn-EhVT1YC5W74A1fM-jqV0s5J9l
 
 <p align="center">
-  <img src="image-6.png" alt="Alt text" width="400">
+  <img src="image-6.png" alt="Alt text" width="600">
 </p>
 
 ## Critical Analysis:
