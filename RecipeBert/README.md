@@ -83,27 +83,41 @@ Important Key Points in Cooking:
 - Finding the two most similar sentences in a dataset of n: This would require us to feed each unique pair through BERT to find its similarity score and then compare it to all other scores. For n sentences would that result in n(n — 1)/2. This turns out to be a real problem if you are trying to integrate this in a real-time environment. A small dataset of only 10,000 sentences would require 49,995,000 passes through BERT, which on a modern GPU would take 60+ hours! This obviously renders BERT useless in most of these scenarios
 
 #### Sentence bert: 
-    # Input
-    sentences = [s1, s2, ..., sN]  
 
-    # BERT initialization
-    bert = BERTModel()  
+###### Siamese network:
+It is a class of neural network architectures that contain two or more identical subnetworks. "Identical" here means that they have the same configuration with the same parameters and weights. Parameter updating is mirrored across both subnetworks during the training process.
 
-    # Siamese BERT network
-    sbert = SiameseBERT(bert)
+###### Triplet Objective Function:
+Given an anchor sentence a, a positive sentence p, and a negative sentence n, triplet loss tunes the network such that the distance between a and p is smaller than the distance between a and n. Mathematically, we minimize the following loss function:
 
-    # Train with regression/triplet loss  
-    train(sbert, sentences, labels)  
+    Loss Function: max(||s_a - s_p|| - ||s_a - s_n|| + ε, 0)
 
-    # Generate embeddings
-    embeddings = []
-    for s in sentences:
-        emb = sbert(s) 
-        embeddings.append(emb)
+###### Sentence Bert Sudo Code:
 
-    # Compute similarity  
-    sim = cosine_similarity(embeddings[i], embeddings[j])
+        Load Pretrained_BERT_Model
+        Prepare Data_Loader with (Anchor_Sentences, Positive_Sentences, Negative_Sentences)
 
+        Compute_Triplet_Loss(Anchor_Embedding, Positive_Embedding, Negative_Embedding, Margin)
+            Positive_Distance ← Compute_Euclidean_Distance(Anchor_Embedding, Positive_Embedding)
+            Negative_Distance ← Compute_Euclidean_Distance(Anchor_Embedding, Negative_Embedding)
+            Triplet_Loss ← Maximum(Positive_Distance - Negative_Distance + Margin, 0)
+        Return Triplet_Loss
+    
+        For each Epoch in Training_Epochs do
+            For each (Anchor, Positive, Negative) in Data_Loader do
+                Anchor_Embedding ← Get_Sentence_Embedding(Anchor)
+                Positive_Embedding ← Get_Sentence_Embedding(Positive)
+                Negative_Embedding ← Get_Sentence_Embedding(Negative)
+
+                Triplet_Loss ← Compute_Triplet_Loss(Anchor_Embedding, Positive_Embedding, Negative_Embedding)
+                Backpropagate_Error(Triplet_Loss)
+
+                Update BERT_Model_Parameters
+            End For
+
+            If Validation_Performance_Improves: Save_Model_Checkpoint          
+        
+ 
 SentenceBERT twin architecture configured for classification.
 
 <p align="center">
@@ -137,7 +151,12 @@ The model is not validated based on real environment with real users recommendta
 Comparison with chatGPT chain of thoughts. Can this very generalized model provide better score than bert ?  Other try any other encoder decoder model. 
 - Involving chatGPT increases the project maintance budget. This simple task should not have high maintaince cost. There is also a scopre for data privacy issues. 
 - Encoder & decoder performance validation. We tried it, but with in our resource limitations, we were not able to achieve similar results. Planning to do further evaluation as a part of future work.
-        
+
+Can we boost performance by fine-tuning? 
+-   Can be. We are planning for our next phase as we are interested in improving performance. But it can be computationally very costly step to take. 
+
+Validate RobertSertence Transformer Architecture. 
+- Yes, as it's one of the other model considered in SentenceTransformer paper, we are interested in validating it's performance. 
 
 ## Repo:
 
